@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="475.0" prefWidth="635.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="programacion.avanzada.programacion_avanzada_project.CategoriasController">
+   <children>
+      <TableView fx:id="tbl_categorias" layoutX="32.0" layoutY="102.0" prefHeight="359.0" prefWidth="559.0">
+        <columns>
+          <TableColumn fx:id="tbl_categorias_col_categoria" prefWidth="186.0" text="CATEGORIA" />
+          <TableColumn fx:id="tbl_categorias_col_disponible" minWidth="0.0" prefWidth="131.0" text="DISPONIBLES" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="46.0" prefHeight="27.0" prefWidth="277.0" text="LISTA DE HABITACIONES">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

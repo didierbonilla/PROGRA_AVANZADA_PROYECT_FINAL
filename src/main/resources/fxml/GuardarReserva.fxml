@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="494.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programacion.avanzada.programacion_avanzada_project.GuardarReservaController">
+    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="144.0" prefHeight="20.0" prefWidth="70.0" text="Habitacion">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtHabitacion" disable="true" layoutX="119.0" layoutY="139.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </TextField>
+    <Button fx:id="btnGuardar" layoutX="38.0" layoutY="435.0" mnemonicParsing="false" onAction="#guardarDatosReserva" prefHeight="34.0" prefWidth="70.0" stylesheets="@../css/Main.css" text="Guardar" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+        <styleClass>
+            <String fx:value="logout" />
+            <String fx:value="shadow" />
+        </styleClass></Button>
+    <Button fx:id="btnVolver" layoutX="116.0" layoutY="435.0" mnemonicParsing="false" onAction="#volver" prefHeight="34.0" prefWidth="70.0" text="Cancelar" />
+   <Label fx:id="lblSubTitulo" layoutX="92.0" layoutY="88.0" text="CATEGORIA SELECCIONADA" />
+   <Label fx:id="lblTitulo" layoutX="92.0" layoutY="58.0" prefHeight="27.0" prefWidth="277.0" text="RESERVACION">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button layoutX="39.0" layoutY="65.0" mnemonicParsing="false" onAction="#volver" prefHeight="35.0" prefWidth="41.0">
+      <graphic>
+         <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+      </graphic>
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Button>
+   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="312.0" layoutY="140.0" prefHeight="20.0" prefWidth="81.0" text="Precio x Dia">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtPrecio" disable="true" layoutX="399.0" layoutY="135.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="183.0" prefHeight="20.0" prefWidth="70.0" text="Categoria">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtCategoria" disable="true" layoutX="119.0" layoutY="178.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="324.0" layoutY="179.0" prefHeight="20.0" prefWidth="70.0" text="Capacidad">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtCapacidad" disable="true" layoutX="400.0" layoutY="174.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Line endX="464.0" layoutX="132.0" layoutY="226.0" startX="-100.0" />
+   <Label contentDisplay="RIGHT" layoutX="33.0" layoutY="252.0" prefHeight="20.0" prefWidth="120.0" text="Reservar desde:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label contentDisplay="RIGHT" layoutX="32.0" layoutY="292.0" prefHeight="20.0" prefWidth="120.0" text="Hasta el dia:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <DatePicker fx:id="txtDesde" layoutX="174.0" layoutY="247.0" prefHeight="30.0" prefWidth="151.0" />
+   <DatePicker fx:id="txtHasta" layoutX="174.0" layoutY="287.0" prefHeight="30.0" prefWidth="151.0" />
+   <Label layoutX="33.0" layoutY="329.0" prefHeight="20.0" prefWidth="120.0" text="DNI Cliente:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtDNI" layoutX="174.0" layoutY="324.0" prefHeight="30.0" prefWidth="151.0" promptText="Documento de Identidad">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Label contentDisplay="RIGHT" layoutX="33.0" layoutY="369.0" prefHeight="20.0" prefWidth="120.0" text="Nombre Completo">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtNombre" layoutX="174.0" layoutY="364.0" prefHeight="30.0" prefWidth="151.0" promptText="Nombre Completo">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Label layoutX="374.0" layoutY="254.0" prefHeight="27.0" prefWidth="183.0" text="Desgloce">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Line endX="67.0" layoutX="500.0" layoutY="285.0" startX="-130.0" />
+   <Label layoutX="376.0" layoutY="296.0" prefHeight="20.0" prefWidth="131.0" text="Total de dias .................">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="376.0" layoutY="318.0" prefHeight="20.0" prefWidth="131.0" text="Precio x Dia  ................">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label fx:id="lblTotalDias" layoutX="509.0" layoutY="298.0" prefHeight="17.0" prefWidth="70.0" text="0 Dia(s)" />
+   <Label fx:id="lblPrecio" layoutX="510.0" layoutY="320.0" prefHeight="17.0" prefWidth="70.0" text="L 000.00" />
+   <Line endX="67.0" layoutX="500.0" layoutY="347.0" startX="-130.0" />
+   <Label layoutX="376.0" layoutY="355.0" prefHeight="27.0" prefWidth="131.0" text="Total Pago ........">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="lblTotal" layoutX="509.0" layoutY="355.0" prefHeight="27.0" prefWidth="94.0" text="L 000.00">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="btnAnularReserva" layoutX="196.0" layoutY="435.0" mnemonicParsing="false" onAction="#anularReserva" prefHeight="34.0" prefWidth="70.0" stylesheets="@../css/Main.css" text="Anular" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <styleClass>
+         <String fx:value="delete-button" />
+         <String fx:value="shadow" />
+      </styleClass>
+   </Button>
+
+</AnchorPane>

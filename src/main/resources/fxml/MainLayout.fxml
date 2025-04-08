@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programacion.avanzada.programacion_avanzada_project.MainController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane prefHeight="500.0" prefWidth="200.0" styleClass="nav-bar" stylesheets="@../css/Main.css">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="70.0" layoutY="144.0" size="7em" />
+                        <Label alignment="CENTER" layoutX="45.0" layoutY="156.0" prefHeight="26.0" prefWidth="111.0" text="Bienvenido" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Line endX="51.0" layoutX="124.0" layoutY="218.0" startX="-100.0" stroke="WHITE" />
+                        <Button layoutX="25.0" layoutY="259.0" mnemonicParsing="false" onAction="#redirecToReservaciones" prefHeight="25.0" prefWidth="152.0" styleClass="nav-button" stylesheets="@../css/Main.css" text="RESERVACIONES" />
+                        <Button fx:id="btnLogout" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="454.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="40.0" stylesheets="@../css/Main.css">
+                            <graphic>
+                                <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                            </graphic>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="logout" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </Button>
+                        <Label layoutX="60.0" layoutY="461.0" text="Cerrar sesion" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                  <Button layoutX="25.0" layoutY="229.0" mnemonicParsing="false" onAction="#redirecToCategorias" prefHeight="25.0" prefWidth="152.0" styleClass="nav-button" stylesheets="@../css/Main.css" text="HABITACIONES" />
+                  <Label fx:id="lblUserName" alignment="CENTER" layoutX="-2.0" layoutY="182.0" prefHeight="26.0" prefWidth="200.0" text="[Nombre Usuario]" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnUsuariosMenu" layoutX="31.0" layoutY="289.0" mnemonicParsing="false" onAction="#redirecToUsuarios" prefHeight="25.0" prefWidth="152.0" styleClass="nav-button" stylesheets="@../css/Main.css" text="USUARIOS" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="frm_main_content" layoutX="207.0" layoutY="7.0" prefHeight="486.0" prefWidth="685.0" stylesheets="@../css/Main.css">
+                    <styleClass>
+                        <String fx:value="bg-white" />
+                        <String fx:value="shadow" />
+                    </styleClass>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

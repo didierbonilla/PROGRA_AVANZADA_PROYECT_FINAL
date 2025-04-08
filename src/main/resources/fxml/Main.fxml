@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programacion.avanzada.programacion_avanzada_project.MainController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="200.0" styleClass="nav-bar" stylesheets="@../css/Main.css">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="70.0" layoutY="144.0" size="7em" />
+                  <Label alignment="CENTER" layoutX="45.0" layoutY="156.0" prefHeight="26.0" prefWidth="111.0" text="Bienvenido" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Line endX="51.0" layoutX="124.0" layoutY="194.0" startX="-100.0" stroke="WHITE" />
+                  <Button layoutX="23.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" styleClass="nav-button" stylesheets="@../css/Main.css" text="USUARIOS" />
+                  <Button fx:id="btnLogout" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="454.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="40.0" stylesheets="@../css/Main.css">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="logout" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Label layoutX="60.0" layoutY="461.0" text="Cerrar sesion" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="207.0" layoutY="7.0" prefHeight="486.0" prefWidth="685.0" stylesheets="@../css/Main.css">
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <TableView fx:id="tblUsuarios" layoutX="13.0" layoutY="14.0" onMouseClicked="#editarUsuario" prefHeight="200.0" prefWidth="660.0">
+                    <columns>
+                      <TableColumn fx:id="colUsuario" prefWidth="112.0" text="USUARIO" />
+                        <TableColumn fx:id="colNombreUsuario" prefWidth="182.0" text="NOMBRE" />
+                      <TableColumn fx:id="colRolUsuario" prefWidth="110.0" text="ROL" />
+                        <TableColumn fx:id="colEmailUsuario" prefWidth="134.0" text="EMAIL" />
+                        <TableColumn fx:id="colTelefonoUsuario" prefWidth="121.0" text="TELEFONO" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="22.0" layoutY="268.0" prefHeight="20.0" prefWidth="70.0" text="Usuario:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUsuario" layoutX="98.0" layoutY="264.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="294.0" layoutY="268.0" prefHeight="20.0" prefWidth="70.0" text="Nombre:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNombre" layoutX="370.0" layoutY="263.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="294.0" layoutY="310.0" prefHeight="20.0" prefWidth="70.0" text="Email:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" layoutX="370.0" layoutY="306.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="294.0" layoutY="352.0" prefHeight="20.0" prefWidth="70.0" text="Telefono:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTelefono" layoutX="370.0" layoutY="347.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="309.0" prefHeight="20.0" prefWidth="49.0" text="Rol:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbbRol" layoutX="98.0" layoutY="305.0" prefHeight="30.0" prefWidth="173.0" promptText="Escoge una opcion" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="13.0" layoutY="352.0" prefHeight="20.0" prefWidth="81.0" text="Contraseña:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtPassword" layoutX="98.0" layoutY="347.0" prefHeight="30.0" prefWidth="173.0" />
+                  <Button fx:id="btnGuardar" layoutX="54.0" layoutY="408.0" mnemonicParsing="false" onAction="#guardarUsuario" prefHeight="34.0" prefWidth="70.0" stylesheets="@../css/Main.css" text="Guardar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="logout" />
+                        <String fx:value="shadow" />
+                     </styleClass></Button>
+                  <Button fx:id="btnNuevo" layoutX="132.0" layoutY="408.0" mnemonicParsing="false" onAction="#limpiarFormulario" prefHeight="34.0" prefWidth="70.0" text="Nuevo" />
+                  <Button fx:id="btnEliminar" layoutX="213.0" layoutY="408.0" mnemonicParsing="false" onAction="#eliminarUsuario" prefHeight="34.0" prefWidth="70.0" stylesheets="@../css/Main.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="delete-button" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

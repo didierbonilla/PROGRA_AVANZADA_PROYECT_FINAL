@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programacion.avanzada.programacion_avanzada_project.RecuperarUsuarioController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="427.0" prefWidth="317.0" styleClass="left-side" stylesheets="@../css/Login.css">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="83.0" layoutY="161.0" size="7em">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" layoutX="54.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programacion Avanzada">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="61.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFX - Scene Builder">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="313.0" prefHeight="427.0" prefWidth="323.0" styleClass="right-side" stylesheets="@../css/Login.css">
+               <children>
+                  <TextField fx:id="txtEmail" layoutX="40.0" layoutY="72.0" prefHeight="30.0" prefWidth="220.0" promptText="Ingresa tu correo electronico" />
+                  <Button fx:id="btnEnviar" layoutX="19.0" layoutY="167.0" mnemonicParsing="false" onAction="#enviarCorreo" prefHeight="30.0" prefWidth="142.0" text="Enviar correo" />
+                  <Text layoutX="76.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recuperar Usuario">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtCodigo" layoutX="41.0" layoutY="109.0" prefHeight="30.0" prefWidth="220.0" promptText="Ingresa el codigo enviado a tu correo" />
+                  <Line endX="100.0" layoutX="150.0" layoutY="213.0" startX="-100.0" />
+                  <AnchorPane fx:id="frmCambiarClave" layoutX="11.0" layoutY="214.0" prefHeight="183.0" prefWidth="279.0">
+                     <children>
+                        <Label layoutX="30.0" layoutY="63.0" text="Ingresa tu nueva contraseña" />
+                        <PasswordField fx:id="txtClave" layoutX="31.0" layoutY="87.0" prefHeight="30.0" prefWidth="220.0" promptText="Ingresa tu nueva clave" />
+                        <Button fx:id="BtnGuardar" layoutX="31.0" layoutY="126.0" mnemonicParsing="false" onAction="#guardarClave" prefHeight="30.0" prefWidth="220.0" text="Guardar Cambios" />
+                        <Label fx:id="lblUsuario" layoutX="30.0" layoutY="14.0" prefHeight="17.0" prefWidth="212.0" text="Usuario: ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblNombre" layoutX="30.0" layoutY="34.0" prefHeight="17.0" prefWidth="212.0" text="Nombre:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="btnVerificarCodigo" layoutX="173.0" layoutY="167.0" mnemonicParsing="false" onAction="#verificarCodigo" prefHeight="30.0" prefWidth="142.0" text="Verificar codigo" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
