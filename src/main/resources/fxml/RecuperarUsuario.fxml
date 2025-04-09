@@ -38,7 +38,7 @@
                <children>
                   <TextField fx:id="txtEmail" layoutX="40.0" layoutY="72.0" prefHeight="30.0" prefWidth="220.0" promptText="Ingresa tu correo electronico" />
                   <Button fx:id="btnEnviar" layoutX="19.0" layoutY="167.0" mnemonicParsing="false" onAction="#enviarCorreo" prefHeight="30.0" prefWidth="142.0" text="Enviar correo" />
-                  <Text layoutX="105.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recuperar Usuario">
+                  <Text layoutX="88.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recuperar Usuario">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -63,7 +63,7 @@
                      </children>
                   </AnchorPane>
                   <Button fx:id="btnVerificarCodigo" layoutX="173.0" layoutY="167.0" mnemonicParsing="false" onAction="#verificarCodigo" prefHeight="30.0" prefWidth="142.0" text="Verificar codigo" />
-                  <Button layoutX="48.0" layoutY="21.0" mnemonicParsing="false" onAction="#redirecToLogin" prefHeight="35.0" prefWidth="41.0">
+                  <Button layoutX="31.0" layoutY="21.0" mnemonicParsing="false" onAction="#redirecToLogin" prefHeight="35.0" prefWidth="41.0">
                      <graphic>
                         <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
                      </graphic>
