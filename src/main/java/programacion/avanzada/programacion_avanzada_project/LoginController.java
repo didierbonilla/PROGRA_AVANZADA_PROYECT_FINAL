@@ -51,28 +51,26 @@ public class LoginController implements Initializable {
                 return;
             }
 
-            this.redirectToMain(user.getNombre(),user.getRol());
+            this.redirectToMain(user);
         }
         catch (Exception e){
             Alertas.error("Error Interno",e.getMessage());
         }
     }
 
-    public void redirectToMain(String username, String rolename) throws IOException {
+    public void redirectToMain(UsuarioModel userData) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainLayout.fxml"));
             Parent root = loader.load();
 
             MainController controller = loader.getController();
-            controller.setUsername(username);
-            controller.setRole(rolename);
+            controller.setUser(userData);
 
             Stage stage = (Stage) btnLogin.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
 
         } catch (IOException e) {
-            //Alertas.error("Error Interno",e.getMessage());
             Alertas.error("Error Interno","No se pudo redirigir a el escenario principal");
         }
     }

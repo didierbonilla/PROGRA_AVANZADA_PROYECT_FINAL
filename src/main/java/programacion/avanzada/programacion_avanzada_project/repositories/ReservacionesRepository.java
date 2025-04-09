@@ -42,7 +42,7 @@ public class ReservacionesRepository {
                 reservas.add(r);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
         }
 
         return reservas;

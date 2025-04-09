@@ -1,5 +1,6 @@
 package programacion.avanzada.programacion_avanzada_project.repositories;
 
+import programacion.avanzada.programacion_avanzada_project.Alertas;
 import programacion.avanzada.programacion_avanzada_project.models.CategoriaHabitacionModel;
 import programacion.avanzada.programacion_avanzada_project.models.HabitacionModel;
 
@@ -32,7 +33,7 @@ public class CategoriasHabitacionesRepository {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
         }
 
         return categorias;
@@ -51,7 +52,7 @@ public class CategoriasHabitacionesRepository {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
         }
 
         return name;
@@ -66,7 +67,7 @@ public class CategoriasHabitacionesRepository {
 
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
             return false;
         }
     }
@@ -80,7 +81,7 @@ public class CategoriasHabitacionesRepository {
 
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
             return false;
         }
     }
@@ -92,7 +93,7 @@ public class CategoriasHabitacionesRepository {
             stmt.setString(1, codigo);
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
             return false;
         }
     }

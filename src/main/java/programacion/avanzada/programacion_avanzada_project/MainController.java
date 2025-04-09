@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import programacion.avanzada.programacion_avanzada_project.models.UsuarioModel;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,6 +19,8 @@ public class MainController implements Initializable {
 
     private String Username;
     private String Role;
+
+    private UsuarioModel DatosUsuario;
 
     @FXML
     private Button btnLogout;
@@ -115,17 +118,13 @@ public class MainController implements Initializable {
         cargarVista("/fxml/Categorias.fxml");
     }
 
-    public void setUsername(String Username) {
-        this.Username = Username;
-        lblUserName.setText(this.Username);
-    }
-
-    public void setRole(String rolename) {
-        this.Role = rolename;
+    public void setUser(UsuarioModel usuario) {
+        this.DatosUsuario = usuario;
+        lblUserName.setText(DatosUsuario.getNombre());
         btnUsuariosMenu.setVisible(this.isAdmin());
     }
 
     public boolean isAdmin() {
-        return this.Role.equalsIgnoreCase("ADMIN");
+        return DatosUsuario.getRol().equalsIgnoreCase("ADMIN");
     }
 }

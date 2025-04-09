@@ -1,5 +1,6 @@
 package programacion.avanzada.programacion_avanzada_project.repositories;
 
+import programacion.avanzada.programacion_avanzada_project.Alertas;
 import programacion.avanzada.programacion_avanzada_project.models.HabitacionModel;
 
 import java.sql.*;
@@ -25,7 +26,7 @@ public class HabitacionesRepository {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
         }
 
         return habitaciones;
@@ -44,7 +45,7 @@ public class HabitacionesRepository {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
         }
 
         return habitaciones;
@@ -63,22 +64,29 @@ public class HabitacionesRepository {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno SQL",e.getMessage());
         }
 
         return item;
     }
 
-    private HabitacionModel mapToModel(ResultSet rs) throws SQLException {
-        return new HabitacionModel(
-            rs.getString("HABITACION_CODIGO"),
-            rs.getString("CATEGORIA_CODIGO"),
-            rs.getString("CATEGORIA_NOMBRE"),
-            rs.getInt("PISO"),
-            rs.getInt("NUMERO"),
-            rs.getInt("CAPACIDAD"),
-            rs.getDouble("PRECIO"),
-            rs.getString("RESERVADA")
-        );
+    private HabitacionModel mapToModel(ResultSet rs) {
+
+        try {
+            return new HabitacionModel(
+                rs.getString("HABITACION_CODIGO"),
+                rs.getString("CATEGORIA_CODIGO"),
+                rs.getString("CATEGORIA_NOMBRE"),
+                rs.getInt("PISO"),
+                rs.getInt("NUMERO"),
+                rs.getInt("CAPACIDAD"),
+                rs.getDouble("PRECIO"),
+                rs.getString("RESERVADA")
+            );
+        }
+        catch (SQLException e) {
+            Alertas.error("Error Interno SQL",e.getMessage());
+            return null;
+        }
     }
 }
