@@ -77,7 +77,7 @@ public class MainController implements Initializable {
             frm_main_content.getChildren().setAll(vista);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno","No se pudo cargar la vista [habitaciones]");
         }
     }
 
@@ -93,7 +93,7 @@ public class MainController implements Initializable {
             frm_main_content.getChildren().setAll(vista);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno","No se pudo cargar la vista [Guadar Reserva]");
         }
     }
 
@@ -109,7 +109,7 @@ public class MainController implements Initializable {
 
             frm_main_content.getChildren().setAll(vista);
         } catch (IOException e) {
-            e.printStackTrace();
+            Alertas.error("Error Interno","No se pudo cargar la vista ["+fxml+"]");
         }
     }
 
